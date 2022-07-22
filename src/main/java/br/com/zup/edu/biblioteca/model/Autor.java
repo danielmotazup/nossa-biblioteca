@@ -1,5 +1,7 @@
 package br.com.zup.edu.biblioteca.model;
 
+import br.com.zup.edu.biblioteca.controller.AtualizaAutorRequest;
+
 import javax.persistence.*;
 
 @Entity
@@ -39,19 +41,12 @@ public class Autor {
         return id;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+    public void atualizaAutor(AtualizaAutorRequest request){
+        this.nome = request.getNome();
+        this.cpf = request.getCpf();
+        this.email = request.getEmail();
+        this.descricao = request.getDescricao();
     }
 }

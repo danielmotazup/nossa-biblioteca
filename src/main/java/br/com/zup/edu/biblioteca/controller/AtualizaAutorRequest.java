@@ -36,12 +36,5 @@ public class AtualizaAutorRequest {
         return email;
     }
 
-    public Autor atualizaAutor(Autor autor){
-        autor.setNome(this.nome);
-        autor.setEmail(this.email);
-        autor.setCpf(this.cpf);
-        autor.setDescricao(this.descricao);
 
-        return autor;
-    }
 }

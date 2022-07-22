@@ -27,7 +27,7 @@ public class AtualizaAutorController {
         Autor autor = autorRepository.findById(idAutor).orElseThrow(() ->
                 new ResponseStatusException(NOT_FOUND, "Autor não encontrado"));
 
-        autor = request.atualizaAutor(autor);
+        autor.atualizaAutor(request);
 
         autorRepository.save(autor);
 
