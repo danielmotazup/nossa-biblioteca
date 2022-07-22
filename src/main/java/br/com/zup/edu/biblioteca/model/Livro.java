@@ -41,4 +41,12 @@ public class Livro {
     public Long getId() {
         return id;
     }
+
+    public boolean validaCirculacao(){
+        if (circulacao.equals(TipoCirculacao.LIVRE)){
+            return true;
+        }
+        return false;
+    }
+
 }
